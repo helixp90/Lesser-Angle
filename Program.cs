@@ -56,16 +56,16 @@ namespace Lesser_Angle
         {
             decimal hour_angle = 0, minute_angle = 0, lesser_angle = 0;
 
-            hour_angle = Math.Ceiling((hour + (minute / 60)) * 30);
+            hour_angle = (hour + (minute / 60)) * 30;
             minute_angle = 6 * minute;
 
             lesser_angle = Math.Abs(hour_angle - minute_angle);
 
-            Console.WriteLine("\nThe hour is {0} and the minute is {1}.", hour, minute);
+            Console.WriteLine("\nThe hour is {0:N2} and the minute is {1:N2}.", hour, minute);
 
-            Console.WriteLine("\nThe hour angle is {0} and the minute angle is {1}.", hour_angle, minute_angle);
+            Console.WriteLine("\nThe hour angle is {0:N2} and the minute angle is {1:N2}.", hour_angle, minute_angle);
 
-            Console.WriteLine("\nThe lesser angle is {0} degrees.", lesser_angle);
+            Console.WriteLine("\nThe lesser angle is {0:N2} degrees.", lesser_angle);
         }
 
             
